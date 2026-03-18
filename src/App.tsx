@@ -1,20 +1,15 @@
-import "./App.css"; // 스타일을 적용하기 위해 불러옵니다.
-
-/*
-작성자 : 1ch
-작성일 : 2030.5.30.
-내용 : 기능에 대한 내용
-*/
+import React from "react";
+import TodoList from "./Todolist";
+import Timer from "./Timer"; // 방금 만든 Timer 컴포넌트를 불러옵니다.
+import "./App.css";
 
 function App() {
-  let name = "리액트";
   return (
     <div className="container">
-      <h1 className="test">
-        Hello,
-        {name === "리액트" ? <h1>YES</h1> : null}!!
-      </h1>
-      {/* <p>반갑습니다.</p> */}
+      {/* TodoList 컴포넌트 아래에 Timer 컴포넌트를 배치합니다. */}
+      <TodoList />
+      <hr /> {/* 화면을 구분하기 위해 얇은 선을 하나 추가했습니다. */}
+      <Timer />
     </div>
   );
 }
